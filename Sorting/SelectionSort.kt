@@ -8,52 +8,52 @@
 // Space complexity - O(1)
 // Not Stable
 
-class SelectionSort {
-    public fun <T: Comparable<T>> Array<T>.sort() {
-        val len = size
-        // Look for the minimum value
-        for (i in 0 until (len -1 )) {
-            var minIndex = i
-            for (j in (i + 1) until len) {
-                if (this[j].compareTo(this[minIndex]) < 0)
-                    minIndex = j
-            }
-            // Found it. Swap it with the i-th value
-            val temp = this[minIndex]
-            this[minIndex] = this[i]
-            this[i] = temp
-        }
-    }
+import java.util.*
 
-    public fun <T: Comparable<T>> MutableList<T>.sort() {
-        val len = size
-        // Look for the minimum value
-        for (i in 0 until (len -1 )) {
-            var minIndex = i
-            for (j in (i + 1) until len) {
-                if (this[j].compareTo(this[minIndex]) < 0)
-                    minIndex = j
-            }
-            // Found it. Swap it with the i-th value
-            val temp = this[minIndex]
-            this[minIndex] = this[i]
-            this[i] = temp
+public fun <T: Comparable<T>> Array<T>.sort() {
+    val len = size
+    // Look for the minimum value
+    for (i in 0 until (len -1 )) {
+        var minIndex = i
+        for (j in (i + 1) until len) {
+            if (this[j].compareTo(this[minIndex]) < 0)
+                minIndex = j
         }
+        // Found it. Swap it with the i-th value
+        val temp = this[minIndex]
+        this[minIndex] = this[i]
+        this[i] = temp
     }
+}
 
-    public fun <T: Comparable<T>> List<T>.sort(): List<T> {
-        val len = size
-        // Look for the minimum value
-        for (i in 0 until (len -1 )) {
-            var minIndex = i
-            for (j in (i + 1) until len) {
-                if (this[j].compareTo(this[minIndex]) < 0)
-                    minIndex = j
-            }
-            // Found it. Swap it with the i-th value
-            val temp = this[minIndex]
-            this[minIndex] = this[i]
-            this[i] = temp
-        } 
+public fun <T: Comparable<T>> MutableList<T>.sort() {
+    val len = size
+    // Look for the minimum value
+    for (i in 0 until (len -1 )) {
+        var minIndex = i
+        for (j in (i + 1) until len) {
+            if (this[j].compareTo(this[minIndex]) < 0)
+                minIndex = j
+        }
+        // Found it. Swap it with the i-th value
+        val temp = this[minIndex]
+        this[minIndex] = this[i]
+        this[i] = temp
     }
+}
+
+public fun <T: Comparable<T>> List<T>.sort(): List<T> {
+    val len = size
+    // Look for the minimum value
+    for (i in 0 until (len -1 )) {
+        var minIndex = i
+        for (j in (i + 1) until len) {
+            if (this[j].compareTo(this[minIndex]) < 0)
+                minIndex = j
+        }
+        // Found it. Swap it with the i-th value
+        val temp = this[minIndex]
+        this[minIndex] = this[i]
+        this[i] = temp
+    } 
 }
